@@ -10,7 +10,6 @@ const TiltFrame = ({ children }) => {
       glareColor="#ffffff"
       glarePosition="bottom"
       glareBorderRadius="8px"
-      gyroscope={true}
     >
       {children}
     </Tilt>
