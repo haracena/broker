@@ -16,25 +16,46 @@ export default function Home() {
       </header>
 
       <main>
-        <section className="my-48 grid grid-cols-2 gap-8` bg-[url('/images/mynameis-bg.png')] bg-no-repeat bg-cover bg-center">
-          <div className="h-full flex flex-col items-center justify-center gap-8">
-            <Title className={"text-center"}>My name is Broker</Title>
-            <p className="max-w-[390px] text-center text-xl text-neutral-500">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
-            </p>
-          </div>
-          <Image
-            src={"/images/cuadros.png"}
-            alt="conjunto de cuadros"
-            width={560}
-            height={510}
-          />
+        <section
+          id="mynameis"
+          className="my-48 bg-no-repeat bg-cover bg-center"
+          style={{
+            backgroundImage:
+              "linear-gradient(to bottom, rgba(10, 10, 10, 1), transparent, rgba(10, 10, 10, 1)), url('/images/mynameis-bg.png')",
+          }}
+        >
+          <ContentWrapper
+            className={
+              "grid grid-cols-1 items-center justify-items-center md:grid-cols-2 gap-8"
+            }
+          >
+            <div className="h-full flex flex-col items-center justify-center gap-8">
+              <Title className={"text-center"}>My name is Broker</Title>
+              <p className="max-w-[390px] text-center text-xl text-neutral-500">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
+              </p>
+            </div>
+            <Image
+              src={"/images/cuadros.png"}
+              alt="conjunto de cuadros"
+              width={560}
+              height={510}
+              className="max-w-full"
+            />
+          </ContentWrapper>
         </section>
 
-        <section className="my-48 bg-[url('/images/cuadros-bg.png')] bg-no-repeat bg-cover bg-center">
+        <section
+          id="cuadros"
+          className="my-48 p-4 bg-no-repeat bg-cover bg-center md"
+          style={{
+            backgroundImage:
+              "linear-gradient(to bottom, rgba(10, 10, 10, 1), transparent, rgba(10, 10, 10, 1)), url('/images/cuadros-bg.png')",
+          }}
+        >
           <Title className={"text-center"}>Cuadros</Title>
-          <div className="mt-16 flex justify-center gap-24">
+          <div className="mt-16 flex flex-col sm:flex-row sm:justify-center gap-12 sm:gap-24">
             <div className="flex flex-col gap-4 items-center">
               <TiltFrame>
                 <Image
@@ -47,8 +68,8 @@ export default function Home() {
               </TiltFrame>
               <p className="text-xl">Dimensiones</p>
               <ul className="text-neutral-500">
-                <li>Largo: 25cm</li>
-                <li>Ancho: 25cm</li>
+                <li>Largo: 60cm</li>
+                <li>Ancho: 30cm</li>
                 <li>Grosor: 10cm</li>
               </ul>
             </div>
@@ -64,8 +85,8 @@ export default function Home() {
               </TiltFrame>
               <p className="text-xl">Dimensiones</p>
               <ul className="text-neutral-500">
-                <li>Largo: 25cm</li>
-                <li>Ancho: 25cm</li>
+                <li>Largo: 60cm</li>
+                <li>Ancho: 30cm</li>
                 <li>Grosor: 10cm</li>
               </ul>
             </div>
@@ -81,16 +102,19 @@ export default function Home() {
               </TiltFrame>
               <p className="text-xl">Dimensiones</p>
               <ul className="text-neutral-500">
-                <li>Largo: 25cm</li>
-                <li>Ancho: 25cm</li>
+                <li>Largo: 60cm</li>
+                <li>Ancho: 30cm</li>
                 <li>Grosor: 10cm</li>
               </ul>
             </div>
           </div>
         </section>
 
-        <section className="mt-48 mb-12 max-w-screen-xl mx-auto flex flex-col gap-8 justify-center items-center">
-          <div className="ml-4 mb-8 p-4 w-[430px] h-[227px] flex justify-center items-center bg-[url('/images/pincelada.png')] bg-contain bg-no-repeat">
+        <section
+          id="contacto"
+          className="mt-48 mb-12 max-w-screen-xl mx-auto flex flex-col gap-8 justify-center items-center"
+        >
+          <div className="ml-4 mb-8 p-4 w-[300px] h-[140px] sm:w-[430px] sm:h-[227px] flex justify-center items-center bg-[url('/images/pincelada.png')] bg-contain bg-center bg-no-repeat">
             <Title className={"-ml-4"}>Contacto</Title>
           </div>
           <Link
